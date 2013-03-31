@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+
+File Extension & XSD definitions
+================================
+
+XRNS (Extended Renoise Song) 
+  -> RenoiseSongXX.xsd
+
+XRNI (Extended Renoise Instrument) 
+  -> RenoiseInstrumentXX.xsd
+
+XRNT (Extended Renoise Track) 
+  -> RenoiseDeviceChainsXX.xsd
+
+XRDP (Extended Renoise Device Preset) 
+  -> FilterDevicePresetXX.xsd
+
+Note: XRNS, XRNI and XRNTs are zip containers (you can open them with 
+any PKZip compatible tool). The main XML file is then in the root of the
+Archive. XRDP is a plain XML file with a *.XRDP file extension.
+
+  
+Renoise Releases & XSD definition versions
+==========================================
+  
+Note: all missing intermediate XSD versions (e.g. RenoiseSong 5-8) can safely 
+be ignored. These are only used in "private" alpha/beta releases, which never 
+went public.
+
+-->
+
+<docs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="RenoiseDocVersions.xsd">  
+  <renoise version="180">
+     <RenoiseSong>4</RenoiseSong>
+     <RenoiseInstrument>2</RenoiseInstrument>
+     <RenoiseDeviceChain>3</RenoiseDeviceChain>     
+  </renoise>
+  <renoise version="190">
+     <RenoiseSong>9</RenoiseSong>
+     <RenoiseInstrument>5</RenoiseInstrument>
+     <RenoiseDeviceChain>5</RenoiseDeviceChain>
+     <FilterDevicePreset>1</FilterDevicePreset>
+  </renoise>
+  <renoise version="191">
+     <RenoiseSong>10</RenoiseSong>
+     <RenoiseInstrument>6</RenoiseInstrument>
+     <RenoiseDeviceChain>6</RenoiseDeviceChain>
+     <FilterDevicePreset>1</FilterDevicePreset>
+  </renoise>
+  <renoise version="200">
+     <RenoiseSong>14</RenoiseSong>
+     <RenoiseInstrument>7</RenoiseInstrument>
+     <RenoiseDeviceChain>7</RenoiseDeviceChain>
+     <FilterDevicePreset>2</FilterDevicePreset>
+  </renoise>
+  <renoise version="210">
+     <RenoiseSong>15</RenoiseSong>
+     <RenoiseInstrument>7</RenoiseInstrument>
+     <RenoiseDeviceChain>8</RenoiseDeviceChain>
+     <FilterDevicePreset>3</FilterDevicePreset>
+  </renoise>
+  <renoise version="250">
+     <RenoiseSong>21</RenoiseSong>
+     <RenoiseInstrument>7</RenoiseInstrument>
+     <RenoiseDeviceChain>10</RenoiseDeviceChain>
+     <FilterDevicePreset>4</FilterDevicePreset>
+  </renoise>
+  <renoise version="260">
+     <RenoiseSong>22</RenoiseSong>
+     <RenoiseInstrument>8</RenoiseInstrument>
+     <RenoiseDeviceChain>11</RenoiseDeviceChain>
+     <FilterDevicePreset>5</FilterDevicePreset>
+  </renoise>
+  <renoise version="270">
+     <RenoiseSong>30</RenoiseSong>
+     <RenoiseInstrument>12</RenoiseInstrument>
+     <RenoiseDeviceChain>12</RenoiseDeviceChain>
+     <FilterDevicePreset>6</FilterDevicePreset>
+  </renoise>
+  <renoise version="280">
+     <RenoiseSong>37</RenoiseSong>
+     <RenoiseInstrument>13</RenoiseInstrument>
+     <RenoiseDeviceChain>16</RenoiseDeviceChain>
+     <FilterDevicePreset>9</FilterDevicePreset>
+  </renoise>
+</docs>

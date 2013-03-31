@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="docs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="renoise"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="renoise">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="RenoiseSong" type="xs:integer" />
+        <xs:element name="RenoiseInstrument" type="xs:integer" />
+        <xs:element name="RenoiseDeviceChain"  type="xs:integer" />
+        <xs:element name="FilterDevicePreset"  type="xs:integer" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="version" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

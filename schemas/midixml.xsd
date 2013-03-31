@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+  <xs:element name="NoteOn">
+    <xs:complexType>
+      <xs:attribute name="Channel" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="3"/>
+            <xs:enumeration value="4"/>
+            <xs:enumeration value="5"/>
+            <xs:enumeration value="6"/>
+            <xs:enumeration value="7"/>
+            <xs:enumeration value="8"/>
+            <xs:enumeration value="9"/>
+            <xs:enumeration value="10"/>
+            <xs:enumeration value="11"/>
+            <xs:enumeration value="12"/>
+            <xs:enumeration value="13"/>
+            <xs:enumeration value="14"/>
+            <xs:enumeration value="15"/>
+            <xs:enumeration value="16"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="Note" type="xs:string" use="required"/>
+      <xs:attribute name="Velocity" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NoteOff">
+    <xs:complexType>
+      <xs:attribute name="Channel" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="3"/>
+            <xs:enumeration value="4"/>
+            <xs:enumeration value="5"/>
+            <xs:enumeration value="6"/>
+            <xs:enumeration value="7"/>
+            <xs:enumeration value="8"/>
+            <xs:enumeration value="9"/>
+            <xs:enumeration value="10"/>
+            <xs:enumeration value="11"/>
+            <xs:enumeration value="12"/>
+            <xs:enumeration value="13"/>
+            <xs:enumeration value="14"/>
+            <xs:enumeration value="15"/>
+            <xs:enumeration value="16"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="Note" type="xs:string" use="required"/>
+      <xs:attribute name="Velocity" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PolyKeyPressure">
+    <xs:complexType>
+      <xs:attribute name="Channel" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="3"/>
+            <xs:enumeration value="4"/>
+            <xs:enumeration value="5"/>
+            <xs:enumeration value="6"/>
+            <xs:enumeration value="7"/>
+            <xs:enumeration value="8"/>
+            <xs:enumeration value="9"/>
+            <xs:enumeration value="10"/>
+            <xs:enumeration value="11"/>
+            <xs:enumeration value="12"/>
+            <xs:enumeration value="13"/>
+            <xs:enumeration value="14"/>
+            <xs:enumeration value="15"/>
+            <xs:enumeration value="16"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="Note" type="xs:string" use="required"/>
+      <xs:attribute name="Pressure" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ControlChange">
+    <xs:complexType>
+      <xs:attribute name="Channel" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="3"/>
+            <xs:enumeration value="4"/>
+            <xs:enumeration value="5"/>
+            <xs:enumeration value="6"/>
+            <xs:enumeration value="7"/>
+            <xs:enumeration value="8"/>
+            <xs:enumeration value="9"/>
+            <xs:enumeration value="10"/>
+            <xs:enumeration value="11"/>
+            <xs:enumeration value="12"/>
+            <xs:enumeration value="13"/>
+            <xs:enumeration value="14"/>
+            <xs:enumeration value="15"/>
+            <xs:enumeration value="16"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="Control" type="xs:string" use="required"/>
+      <xs:attribute name="Value" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProgramChange">
+    <xs:complexType>
+      <xs:attribute name="Channel" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="3"/>
+            <xs:enumeration value="4"/>
+            <xs:enumeration value="5"/>
+            <xs:enumeration value="6"/>
+            <xs:enumeration value="7"/>
+            <xs:enumeration value="8"/>
+            <xs:enumeration value="9"/>
+            <xs:enumeration value="10"/>
+            <xs:enumeration value="11"/>
+            <xs:enumeration value="12"/>
+            <xs:enumeration value="13"/>
+            <xs:enumeration value="14"/>
+            <xs:enumeration value="15"/>
+            <xs:enumeration value="16"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="Number" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChannelKeyPressure">
+    <xs:complexType>
+      <xs:attribute name="Channel" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="3"/>
+            <xs:enumeration value="4"/>
+            <xs:enumeration value="5"/>
+            <xs:enumeration value="6"/>
+            <xs:enumeration value="7"/>
+            <xs:enumeration value="8"/>
+            <xs:enumeration value="9"/>
+            <xs:enumeration value="10"/>
+            <xs:enumeration value="11"/>
+            <xs:enumeration value="12"/>
+            <xs:enumeration value="13"/>
+            <xs:enumeration value="14"/>
+            <xs:enumeration value="15"/>
+            <xs:enumeration value="16"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="Pressure" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PitchBendChange">
+    <xs:complexType>
+      <xs:attribute name="Channel" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="3"/>
+            <xs:enumeration value="4"/>
+            <xs:enumeration value="5"/>
+            <xs:enumeration value="6"/>
+            <xs:enumeration value="7"/>
+            <xs:enumeration value="8"/>
+            <xs:enumeration value="9"/>
+            <xs:enumeration value="10"/>
+            <xs:enumeration value="11"/>
+            <xs:enumeration value="12"/>
+            <xs:enumeration value="13"/>
+            <xs:enumeration value="14"/>
+            <xs:enumeration value="15"/>
+            <xs:enumeration value="16"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="Value" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AllSoundOff">
+    <xs:complexType>
+      <xs:attribute name="Channel" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="3"/>
+            <xs:enumeration value="4"/>
+            <xs:enumeration value="5"/>
+            <xs:enumeration value="6"/>
+            <xs:enumeration value="7"/>
+            <xs:enumeration value="8"/>
+            <xs:enumeration value="9"/>
+            <xs:enumeration value="10"/>
+            <xs:enumeration value="11"/>
+            <xs:enumeration value="12"/>
+            <xs:enumeration value="13"/>
+            <xs:enumeration value="14"/>
+            <xs:enumeration value="15"/>
+            <xs:enumeration value="16"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResetAllControllers">
+    <xs:complexType>
+      <xs:attribute name="Channel" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="3"/>
+            <xs:enumeration value="4"/>
+            <xs:enumeration value="5"/>
+            <xs:enumeration value="6"/>
+            <xs:enumeration value="7"/>
+            <xs:enumeration value="8"/>
+            <xs:enumeration value="9"/>
+            <xs:enumeration value="10"/>
+            <xs:enumeration value="11"/>
+            <xs:enumeration value="12"/>
+            <xs:enumeration value="13"/>
+            <xs:enumeration value="14"/>
+            <xs:enumeration value="15"/>
+            <xs:enumeration value="16"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LocalControl">
+    <xs:complexType>
+      <xs:attribute name="Channel" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="3"/>
+            <xs:enumeration value="4"/>
+            <xs:enumeration value="5"/>
+            <xs:enumeration value="6"/>
+            <xs:enumeration value="7"/>
+            <xs:enumeration value="8"/>
+            <xs:enumeration value="9"/>
+            <xs:enumeration value="10"/>
+            <xs:enumeration value="11"/>
+            <xs:enumeration value="12"/>
+            <xs:enumeration value="13"/>
+            <xs:enumeration value="14"/>
+            <xs:enumeration value="15"/>
+            <xs:enumeration value="16"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="Value" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="off"/>
+            <xs:enumeration value="on"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AllNotesOff">
+    <xs:complexType>
+      <xs:attribute name="Channel" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="3"/>
+            <xs:enumeration value="4"/>
+            <xs:enumeration value="5"/>
+            <xs:enumeration value="6"/>
+            <xs:enumeration value="7"/>
+            <xs:enumeration value="8"/>
+            <xs:enumeration value="9"/>
+            <xs:enumeration value="10"/>
+            <xs:enumeration value="11"/>
+            <xs:enumeration value="12"/>
+            <xs:enumeration value="13"/>
+            <xs:enumeration value="14"/>
+            <xs:enumeration value="15"/>
+            <xs:enumeration value="16"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OmniOff">
+    <xs:complexType>
+      <xs:attribute name="Channel" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="3"/>
+            <xs:enumeration value="4"/>
+            <xs:enumeration value="5"/>
+            <xs:enumeration value="6"/>
+            <xs:enumeration value="7"/>
+            <xs:enumeration value="8"/>
+            <xs:enumeration value="9"/>
+            <xs:enumeration value="10"/>
+            <xs:enumeration value="11"/>
+            <xs:enumeration value="12"/>
+            <xs:enumeration value="13"/>
+            <xs:enumeration value="14"/>
+            <xs:enumeration value="15"/>
+            <xs:enumeration value="16"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OmniOn">
+    <xs:complexType>
+      <xs:attribute name="Channel" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="3"/>
+            <xs:enumeration value="4"/>
+            <xs:enumeration value="5"/>
+            <xs:enumeration value="6"/>
+            <xs:enumeration value="7"/>
+            <xs:enumeration value="8"/>
+            <xs:enumeration value="9"/>
+            <xs:enumeration value="10"/>
+            <xs:enumeration value="11"/>
+            <xs:enumeration value="12"/>
+            <xs:enumeration value="13"/>
+            <xs:enumeration value="14"/>
+            <xs:enumeration value="15"/>
+            <xs:enumeration value="16"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MonoMode">
+    <xs:complexType>
+      <xs:attribute name="Channel" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="3"/>
+            <xs:enumeration value="4"/>
+            <xs:enumeration value="5"/>
+            <xs:enumeration value="6"/>
+            <xs:enumeration value="7"/>
+            <xs:enumeration value="8"/>
+            <xs:enumeration value="9"/>
+            <xs:enumeration value="10"/>
+            <xs:enumeration value="11"/>
+            <xs:enumeration value="12"/>
+            <xs:enumeration value="13"/>
+            <xs:enumeration value="14"/>
+            <xs:enumeration value="15"/>
+            <xs:enumeration value="16"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="Value" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PolyMode">
+    <xs:complexType>
+      <xs:attribute name="Channel" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="3"/>
+            <xs:enumeration value="4"/>
+            <xs:enumeration value="5"/>
+            <xs:enumeration value="6"/>
+            <xs:enumeration value="7"/>
+            <xs:enumeration value="8"/>
+            <xs:enumeration value="9"/>
+            <xs:enumeration value="10"/>
+            <xs:enumeration value="11"/>
+            <xs:enumeration value="12"/>
+            <xs:enumeration value="13"/>
+            <xs:enumeration value="14"/>
+            <xs:enumeration value="15"/>
+            <xs:enumeration value="16"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ControlChange14">
+    <xs:complexType>
+      <xs:attribute name="Channel" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="3"/>
+            <xs:enumeration value="4"/>
+            <xs:enumeration value="5"/>
+            <xs:enumeration value="6"/>
+            <xs:enumeration value="7"/>
+            <xs:enumeration value="8"/>
+            <xs:enumeration value="9"/>
+            <xs:enumeration value="10"/>
+            <xs:enumeration value="11"/>
+            <xs:enumeration value="12"/>
+            <xs:enumeration value="13"/>
+            <xs:enumeration value="14"/>
+            <xs:enumeration value="15"/>
+            <xs:enumeration value="16"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="Control" type="xs:string" use="required"/>
+      <xs:attribute name="Value" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RPNChange">
+    <xs:complexType>
+      <xs:attribute name="Channel" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="3"/>
+            <xs:enumeration value="4"/>
+            <xs:enumeration value="5"/>
+            <xs:enumeration value="6"/>
+            <xs:enumeration value="7"/>
+            <xs:enumeration value="8"/>
+            <xs:enumeration value="9"/>
+            <xs:enumeration value="10"/>
+            <xs:enumeration value="11"/>
+            <xs:enumeration value="12"/>
+            <xs:enumeration value="13"/>
+            <xs:enumeration value="14"/>
+            <xs:enumeration value="15"/>
+            <xs:enumeration value="16"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="RPN" type="xs:string" use="required"/>
+      <xs:attribute name="Value" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NRPNChange">
+    <xs:complexType>
+      <xs:attribute name="Channel" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="3"/>
+            <xs:enumeration value="4"/>
+            <xs:enumeration value="5"/>
+            <xs:enumeration value="6"/>
+            <xs:enumeration value="7"/>
+            <xs:enumeration value="8"/>
+            <xs:enumeration value="9"/>
+            <xs:enumeration value="10"/>
+            <xs:enumeration value="11"/>
+            <xs:enumeration value="12"/>
+            <xs:enumeration value="13"/>
+            <xs:enumeration value="14"/>
+            <xs:enumeration value="15"/>
+            <xs:enumeration value="16"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="NRPN" type="xs:string" use="required"/>
+      <xs:attribute name="Value" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SysEx">
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="SysExDeviceID"/>
+        <xs:element ref="SysExChannel"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SysExDeviceID">
+    <xs:complexType>
+      <xs:attribute name="Multiplier" type="xs:string" default="1"/>
+      <xs:attribute name="Offset" type="xs:string" default="0"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SysExChannel">
+    <xs:complexType>
+      <xs:attribute name="Multiplier" type="xs:string" default="1"/>
+      <xs:attribute name="Offset" type="xs:string" default="0"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MTCQuarterFrame">
+    <xs:complexType>
+      <xs:attribute name="MessageType" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="FrameLSNibble"/>
+            <xs:enumeration value="FrameMSNibble"/>
+            <xs:enumeration value="SecsLSNibble"/>
+            <xs:enumeration value="SecsMSNibble"/>
+            <xs:enumeration value="MinsLSNibble"/>
+            <xs:enumeration value="MinsMSNibble"/>
+            <xs:enumeration value="HrsLSNibble"/>
+            <xs:enumeration value="HrsMSNibbleSMPTEType"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="DataNibble" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SongPositionPointer">
+    <xs:complexType>
+      <xs:attribute name="Position" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SongSelect">
+    <xs:complexType>
+      <xs:attribute name="Number" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TuneRequest">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="TimingClock">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="Start">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="Continue">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="Stop">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="ActiveSensing">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="SystemReset">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="Delta" type="xs:string"/>
+  <xs:element name="Absolute" type="xs:string"/>
+  <xs:element name="Event">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice>
+          <xs:element ref="Delta"/>
+          <xs:element ref="Absolute"/>
+        </xs:choice>
+        <xs:choice>
+          <xs:choice>
+            <xs:choice>
+              <xs:element ref="NoteOn"/>
+              <xs:element ref="NoteOff"/>
+              <xs:element ref="PolyKeyPressure"/>
+              <xs:element ref="ControlChange"/>
+              <xs:element ref="ProgramChange"/>
+              <xs:element ref="ChannelKeyPressure"/>
+              <xs:element ref="PitchBendChange"/>
+            </xs:choice>
+            <xs:choice>
+              <xs:element ref="AllSoundOff"/>
+              <xs:element ref="ResetAllControllers"/>
+              <xs:element ref="LocalControl"/>
+              <xs:element ref="AllNotesOff"/>
+              <xs:element ref="OmniOff"/>
+              <xs:element ref="OmniOn"/>
+              <xs:element ref="MonoMode"/>
+              <xs:element ref="PolyMode"/>
+            </xs:choice>
+          </xs:choice>
+          <xs:choice>
+            <xs:element ref="SequenceNumber"/>
+            <xs:element ref="TextEvent"/>
+            <xs:element ref="CopyrightNotice"/>
+            <xs:element ref="TrackName"/>
+            <xs:element ref="InstrumentName"/>
+            <xs:element ref="Lyric"/>
+            <xs:element ref="Marker"/>
+            <xs:element ref="CuePoint"/>
+            <xs:element ref="ProgramName"/>
+            <xs:element ref="DeviceName"/>
+            <xs:element ref="Port"/>
+            <xs:element ref="MIDIChannelPrefix"/>
+            <xs:element ref="EndOfTrack"/>
+            <xs:element ref="SetTempo"/>
+            <xs:element ref="SMPTEOffset"/>
+            <xs:element ref="TimeSignature"/>
+            <xs:element ref="KeySignature"/>
+            <xs:element ref="SequencerSpecific"/>
+            <xs:element ref="OtherMetaEvent"/>
+          </xs:choice>
+          <xs:choice>
+            <xs:element ref="SystemExclusive"/>
+            <xs:element ref="EndOfExclusive"/>
+          </xs:choice>
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SequenceNumber">
+    <xs:annotation>
+      <xs:documentation>
+	MIDI meta events. If empty, the value for the event is
+	contained in an attribute, following the pattern of the
+	MMA's MIDI DTD. Textual meta events have their values as
+	text within the element.
+</xs:documentation>
+      <xs:documentation>
+	Standard MIDI File DTD: MIDI XML
+
+	Version 2.0 - 18 June 2007
+
+	Copyright © 2004-2007 Recordare LLC.
+	http://www.recordare.com/
+	
+	This MusicXML™ work is being provided by the copyright
+	holder under the MusicXML Document Type Definition 
+	Public License Version 2.0, available from:
+	
+		http://www.recordare.com/dtds/license.html
+</xs:documentation>
+      <xs:documentation>
+	MIDI XML is an XML representation of standard MIDI files for
+	MIDI 1.0. Unlike standard MIDI files, it can have timestamps
+	present as either absolute or delta values. This makes it
+	convenient as an intermediate format to convert from the
+	MusicXML format and other formats where note on and note off
+	are not represented as discrete events. To convert to
+	Standard MIDI Files, delta values must be used.
+	
+	Suggested use:
+	
+	&lt;!DOCTYPE MIDIFile PUBLIC
+		"-//Recordare//DTD MusicXML 2.0 MIDI//EN"
+		"http://www.musicxml.org/dtds/midixml.dtd"&gt;
+	
+</xs:documentation>
+      <xs:documentation>
+	For Standard MIDI Files, channels are required; events
+	are not rechannelized.
+</xs:documentation>
+      <xs:documentation> Component DTD modules </xs:documentation>
+      <xs:documentation>
+	The MMA MIDI DTD contains the definitions of all MIDI
+	events. Its regular address is:
+	
+	http://www.midi.org/dtds/MIDIEvents10.dtd
+	
+	For convenience, we include a local copy with our
+	definition, and reference that here.
+</xs:documentation>
+      <xs:documentation>
+	Timestamps are either delta or absolute. They must all be
+	one or the other throughout the MIDI XML file. Timestamps
+	are numeric values measured in MIDI ticks.
+</xs:documentation>
+      <xs:documentation>
+	Standard MIDI File events include MIDI Channel messages,
+	meta-events, and system exclusive events. Each track is
+	a series of events. The MetaEvent and SysExEvent elements
+	are defined below. The MIDIChannelMessage and MIDIMessage
+	events are defined in the MMA's MIDI DTD (RP-038).
+</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attribute name="Value" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TextEvent" type="xs:string"/>
+  <xs:element name="CopyrightNotice" type="xs:string"/>
+  <xs:element name="TrackName" type="xs:string"/>
+  <xs:element name="InstrumentName" type="xs:string"/>
+  <xs:element name="Lyric" type="xs:string"/>
+  <xs:element name="Marker" type="xs:string"/>
+  <xs:element name="CuePoint" type="xs:string"/>
+  <xs:element name="MIDIChannelPrefix">
+    <xs:complexType>
+      <xs:attribute name="Value" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EndOfTrack">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="SetTempo">
+    <xs:complexType>
+      <xs:attribute name="Value" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SMPTEOffset">
+    <xs:complexType>
+      <xs:attribute name="TimeCodeType" type="xs:string" use="required"/>
+      <xs:attribute name="Hour" type="xs:string" use="required"/>
+      <xs:attribute name="Minute" type="xs:string" use="required"/>
+      <xs:attribute name="Second" type="xs:string" use="required"/>
+      <xs:attribute name="Frame" type="xs:string" use="required"/>
+      <xs:attribute name="FractionalFrame" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TimeSignature">
+    <xs:complexType>
+      <xs:attribute name="Numerator" type="xs:string" use="required"/>
+      <xs:attribute name="LogDenominator" type="xs:string" use="required"/>
+      <xs:attribute name="MIDIClocksPerMetronomeClick" type="xs:string" use="required"/>
+      <xs:attribute name="ThirtySecondsPer24Clocks" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="KeySignature">
+    <xs:complexType>
+      <xs:attribute name="Fifths" type="xs:string" use="required"/>
+      <xs:attribute name="Mode" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SequencerSpecific" type="xs:string"/>
+  <xs:element name="ProgramName" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>
+	The ProgramName and DeviceName meta-events are described
+	in RP-019 from the MMA. They allow a Standard MIDI file to
+	address multiple devices, enabling more than 16 channels of
+	MIDI playback.
+</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="DeviceName" type="xs:string"/>
+  <xs:element name="XMFPatchTypePrefix">
+    <xs:annotation>
+      <xs:documentation>
+	The XMFPatchTypePrefix meta-event is described in
+	RP-032 from the MMA. It allows specification of using
+	General MIDI 1, General MIDI 2, or DLS to interpret
+	subsequent program change and bank select messages
+	in the same track.
+</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attribute name="Value" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Port">
+    <xs:annotation>
+      <xs:documentation>
+	The meta-event hex 21 has been used, though unofficially,
+	for a MIDI port or cable number. RP-019 deprecates this in
+	favor of the DeviceName meta-event, but some programs
+	still use this.
+</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attribute name="Value" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OtherMetaEvent">
+    <xs:annotation>
+      <xs:documentation>
+	An unrecognized meta-event has an attribute for its event
+	type number. The data for the event is represented in hex
+	within the element, as is done for system exclusives.
+</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="Number" type="xs:string" use="required"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SystemExclusive" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>
+	MIDI system exclusive and end of exclusive events have
+	their data represented as a series of 2-digit hex elements
+	separated by spaces, as in the MMA MIDI DTD.
+</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="EndOfExclusive" type="xs:string"/>
+  <xs:element name="MIDIFile">
+    <xs:annotation>
+      <xs:documentation> MIDI is the root element </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Format"/>
+        <xs:element ref="TrackCount"/>
+        <xs:choice>
+          <xs:element ref="TicksPerBeat"/>
+          <xs:sequence>
+            <xs:element ref="FrameRate"/>
+            <xs:element ref="TicksPerFrame"/>
+          </xs:sequence>
+        </xs:choice>
+        <xs:element ref="TimestampType"/>
+        <xs:element ref="Track" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Format" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>
+	Format indicates MIDI format 0, 1, or 2. So far only types
+	0 and 1 are explicitly supported by the MIDI XML format.
+</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="TrackCount" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>
+	TrackCount indicate the number of tracks in a file: 1 for
+	type 0, usually more for types 1 and 2. The TrackCount
+	matches the number of Track elements in the MIDI XML file.
+</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="TicksPerBeat" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>
+	How many ticks in a beat (MIDI quarter note).
+</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="FrameRate" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>
+	Frame rate and ticks per frame are used with SMPTE
+	time codes.
+</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="TicksPerFrame" type="xs:string"/>
+  <xs:element name="TimestampType" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>
+	TimestampType should be Delta or Absolute. Indicates the
+	element name to look for in the initial timestamp in each
+	MIDI event.
+</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="Track">
+    <xs:annotation>
+      <xs:documentation>
+	Tracks contain the musical data and are made up of a series
+	of events. The track number attribute is required.
+</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Event" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="Number" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

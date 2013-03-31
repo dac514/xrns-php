@@ -1,0 +1,2243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+  <xs:element name="FilterDevicePreset">
+    <xs:complexType>
+      <xs:all>
+        <xs:element name="DeviceSlot" minOccurs="0">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="IsActive" type="xs:boolean" default="true" minOccurs="0" />
+              <xs:element name="IsSelected" type="xs:boolean" default="false" minOccurs="0" />
+              <xs:element name="SelectedPresetName" type="xs:string" default="Init" minOccurs="0" />
+              <xs:element name="RunTimePresetA" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="DeviceSlot" minOccurs="0">
+                      <xs:complexType>
+                        <xs:all>
+                          <xs:element name="IsActive" type="xs:boolean" default="true" minOccurs="0" />
+                          <xs:element name="IsSelected" type="xs:boolean" default="false" minOccurs="0" />
+                          <xs:element name="SelectedPresetName" type="xs:string" default="Init" minOccurs="0" />
+                          <xs:element name="RunTimePresetA" minOccurs="0">
+                            <xs:complexType>
+                              <xs:all>
+                                <xs:element name="DeviceSlot" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:all>
+                                      <xs:element name="Panning" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:all>
+                                            <xs:element name="Value" type="xs:float" default="0.5" minOccurs="0" />
+                                          </xs:all>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="Volume" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:all>
+                                            <xs:element name="Value" type="xs:float" default="1.0" minOccurs="0" />
+                                          </xs:all>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="Surround" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:all>
+                                            <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                                          </xs:all>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="PostPanning" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:all>
+                                            <xs:element name="Value" type="xs:float" default="0.5" minOccurs="0" />
+                                          </xs:all>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="PostVolume" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:all>
+                                            <xs:element name="Value" type="xs:float" default="1.0" minOccurs="0" />
+                                          </xs:all>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:all>
+                                    <xs:attribute name="type" use="required" type="xs:string" fixed="SequencerTrackDevice" />
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:all>
+                              <xs:attribute name="type" use="required" type="xs:string" fixed="FilterDevicePreset" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="RunTimePresetB" minOccurs="0">
+                            <xs:complexType>
+                              <xs:all>
+                                <xs:element name="DeviceSlot" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:all>
+                                      <xs:element name="Panning" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:all>
+                                            <xs:element name="Value" type="xs:float" default="0.5" minOccurs="0" />
+                                          </xs:all>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="Volume" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:all>
+                                            <xs:element name="Value" type="xs:float" default="1.0" minOccurs="0" />
+                                          </xs:all>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="Surround" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:all>
+                                            <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                                          </xs:all>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="PostPanning" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:all>
+                                            <xs:element name="Value" type="xs:float" default="0.5" minOccurs="0" />
+                                          </xs:all>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="PostVolume" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:all>
+                                            <xs:element name="Value" type="xs:float" default="1.0" minOccurs="0" />
+                                          </xs:all>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:all>
+                                    <xs:attribute name="type" use="required" type="xs:string" fixed="SequencerTrackDevice" />
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:all>
+                              <xs:attribute name="type" use="required" type="xs:string" fixed="FilterDevicePreset" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Panning" minOccurs="0">
+                            <xs:complexType>
+                              <xs:all>
+                                <xs:element name="Value" type="xs:float" default="0.5" minOccurs="0" />
+                                <xs:element name="Visualization" default="Device only" minOccurs="0">
+                                  <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                      <xs:enumeration value="Dont Show" />
+                                      <xs:enumeration value="Device only" />
+                                      <xs:enumeration value="Mixer and Device" />
+                                    </xs:restriction>
+                                  </xs:simpleType>
+                                </xs:element>
+                                <xs:element name="MidiMappings" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="MidiMapping" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:all>
+                                            <xs:element name="Channel" type="xs:int" default="-1" minOccurs="0" />
+                                            <xs:element name="CCNumber" type="xs:int" default="-1" minOccurs="0" />
+                                            <xs:element name="Mode" type="xs:int" default="0" minOccurs="0" />
+                                            <xs:element name="Min" type="xs:float" default="0.0" minOccurs="0" />
+                                            <xs:element name="Max" type="xs:float" default="1.0" minOccurs="0" />
+                                            <xs:element name="Inverse" type="xs:boolean" default="false" minOccurs="0" />
+                                          </xs:all>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:all>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Volume" minOccurs="0">
+                            <xs:complexType>
+                              <xs:all>
+                                <xs:element name="Value" type="xs:float" default="1.0" minOccurs="0" />
+                                <xs:element name="Visualization" default="Device only" minOccurs="0">
+                                  <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                      <xs:enumeration value="Dont Show" />
+                                      <xs:enumeration value="Device only" />
+                                      <xs:enumeration value="Mixer and Device" />
+                                    </xs:restriction>
+                                  </xs:simpleType>
+                                </xs:element>
+                                <xs:element name="MidiMappings" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="MidiMapping" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:all>
+                                            <xs:element name="Channel" type="xs:int" default="-1" minOccurs="0" />
+                                            <xs:element name="CCNumber" type="xs:int" default="-1" minOccurs="0" />
+                                            <xs:element name="Mode" type="xs:int" default="0" minOccurs="0" />
+                                            <xs:element name="Min" type="xs:float" default="0.0" minOccurs="0" />
+                                            <xs:element name="Max" type="xs:float" default="1.0" minOccurs="0" />
+                                            <xs:element name="Inverse" type="xs:boolean" default="false" minOccurs="0" />
+                                          </xs:all>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:all>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Surround" minOccurs="0">
+                            <xs:complexType>
+                              <xs:all>
+                                <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                                <xs:element name="Visualization" default="Device only" minOccurs="0">
+                                  <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                      <xs:enumeration value="Dont Show" />
+                                      <xs:enumeration value="Device only" />
+                                      <xs:enumeration value="Mixer and Device" />
+                                    </xs:restriction>
+                                  </xs:simpleType>
+                                </xs:element>
+                                <xs:element name="MidiMappings" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="MidiMapping" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:all>
+                                            <xs:element name="Channel" type="xs:int" default="-1" minOccurs="0" />
+                                            <xs:element name="CCNumber" type="xs:int" default="-1" minOccurs="0" />
+                                            <xs:element name="Mode" type="xs:int" default="0" minOccurs="0" />
+                                            <xs:element name="Min" type="xs:float" default="0.0" minOccurs="0" />
+                                            <xs:element name="Max" type="xs:float" default="1.0" minOccurs="0" />
+                                            <xs:element name="Inverse" type="xs:boolean" default="false" minOccurs="0" />
+                                          </xs:all>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:all>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="PostPanning" minOccurs="0">
+                            <xs:complexType>
+                              <xs:all>
+                                <xs:element name="Value" type="xs:float" default="0.5" minOccurs="0" />
+                                <xs:element name="Visualization" default="Device only" minOccurs="0">
+                                  <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                      <xs:enumeration value="Dont Show" />
+                                      <xs:enumeration value="Device only" />
+                                      <xs:enumeration value="Mixer and Device" />
+                                    </xs:restriction>
+                                  </xs:simpleType>
+                                </xs:element>
+                                <xs:element name="MidiMappings" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="MidiMapping" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:all>
+                                            <xs:element name="Channel" type="xs:int" default="-1" minOccurs="0" />
+                                            <xs:element name="CCNumber" type="xs:int" default="-1" minOccurs="0" />
+                                            <xs:element name="Mode" type="xs:int" default="0" minOccurs="0" />
+                                            <xs:element name="Min" type="xs:float" default="0.0" minOccurs="0" />
+                                            <xs:element name="Max" type="xs:float" default="1.0" minOccurs="0" />
+                                            <xs:element name="Inverse" type="xs:boolean" default="false" minOccurs="0" />
+                                          </xs:all>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:all>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="PostVolume" minOccurs="0">
+                            <xs:complexType>
+                              <xs:all>
+                                <xs:element name="Value" type="xs:float" default="1.0" minOccurs="0" />
+                                <xs:element name="Visualization" default="Device only" minOccurs="0">
+                                  <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                      <xs:enumeration value="Dont Show" />
+                                      <xs:enumeration value="Device only" />
+                                      <xs:enumeration value="Mixer and Device" />
+                                    </xs:restriction>
+                                  </xs:simpleType>
+                                </xs:element>
+                                <xs:element name="MidiMappings" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="MidiMapping" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:all>
+                                            <xs:element name="Channel" type="xs:int" default="-1" minOccurs="0" />
+                                            <xs:element name="CCNumber" type="xs:int" default="-1" minOccurs="0" />
+                                            <xs:element name="Mode" type="xs:int" default="0" minOccurs="0" />
+                                            <xs:element name="Min" type="xs:float" default="0.0" minOccurs="0" />
+                                            <xs:element name="Max" type="xs:float" default="1.0" minOccurs="0" />
+                                            <xs:element name="Inverse" type="xs:boolean" default="false" minOccurs="0" />
+                                          </xs:all>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:all>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:all>
+                        <xs:attribute name="type" use="required" type="xs:string" fixed="SequencerTrackDevice" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:all>
+                  <xs:attribute name="type" use="required" type="xs:string" fixed="FilterDevicePreset" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="RunTimePresetB" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="DeviceSlot" minOccurs="0">
+                      <xs:complexType>
+                        <xs:all>
+                          <xs:element name="Panning" minOccurs="0">
+                            <xs:complexType>
+                              <xs:all>
+                                <xs:element name="Value" type="xs:float" default="0.5" minOccurs="0" />
+                              </xs:all>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Volume" minOccurs="0">
+                            <xs:complexType>
+                              <xs:all>
+                                <xs:element name="Value" type="xs:float" default="1.0" minOccurs="0" />
+                              </xs:all>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Surround" minOccurs="0">
+                            <xs:complexType>
+                              <xs:all>
+                                <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                              </xs:all>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="PostPanning" minOccurs="0">
+                            <xs:complexType>
+                              <xs:all>
+                                <xs:element name="Value" type="xs:float" default="0.5" minOccurs="0" />
+                              </xs:all>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="PostVolume" minOccurs="0">
+                            <xs:complexType>
+                              <xs:all>
+                                <xs:element name="Value" type="xs:float" default="1.0" minOccurs="0" />
+                              </xs:all>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:all>
+                        <xs:attribute name="type" use="required" type="xs:string" fixed="SequencerTrackDevice" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:all>
+                  <xs:attribute name="type" use="required" type="xs:string" fixed="FilterDevicePreset" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Panning" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.5" minOccurs="0" />
+                    <xs:element name="Visualization" default="Device only" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:enumeration value="Dont Show" />
+                          <xs:enumeration value="Device only" />
+                          <xs:enumeration value="Mixer and Device" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="MidiMappings" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="MidiMapping" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:all>
+                                <xs:element name="Channel" type="xs:int" default="-1" minOccurs="0" />
+                                <xs:element name="CCNumber" type="xs:int" default="-1" minOccurs="0" />
+                                <xs:element name="Mode" type="xs:int" default="0" minOccurs="0" />
+                                <xs:element name="Min" type="xs:float" default="0.0" minOccurs="0" />
+                                <xs:element name="Max" type="xs:float" default="1.0" minOccurs="0" />
+                                <xs:element name="Inverse" type="xs:boolean" default="false" minOccurs="0" />
+                              </xs:all>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Volume" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="1.0" minOccurs="0" />
+                    <xs:element name="Visualization" default="Device only" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:enumeration value="Dont Show" />
+                          <xs:enumeration value="Device only" />
+                          <xs:enumeration value="Mixer and Device" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="MidiMappings" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="MidiMapping" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:all>
+                                <xs:element name="Channel" type="xs:int" default="-1" minOccurs="0" />
+                                <xs:element name="CCNumber" type="xs:int" default="-1" minOccurs="0" />
+                                <xs:element name="Mode" type="xs:int" default="0" minOccurs="0" />
+                                <xs:element name="Min" type="xs:float" default="0.0" minOccurs="0" />
+                                <xs:element name="Max" type="xs:float" default="1.0" minOccurs="0" />
+                                <xs:element name="Inverse" type="xs:boolean" default="false" minOccurs="0" />
+                              </xs:all>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Surround" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                    <xs:element name="Visualization" default="Device only" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:enumeration value="Dont Show" />
+                          <xs:enumeration value="Device only" />
+                          <xs:enumeration value="Mixer and Device" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="MidiMappings" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="MidiMapping" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:all>
+                                <xs:element name="Channel" type="xs:int" default="-1" minOccurs="0" />
+                                <xs:element name="CCNumber" type="xs:int" default="-1" minOccurs="0" />
+                                <xs:element name="Mode" type="xs:int" default="0" minOccurs="0" />
+                                <xs:element name="Min" type="xs:float" default="0.0" minOccurs="0" />
+                                <xs:element name="Max" type="xs:float" default="1.0" minOccurs="0" />
+                                <xs:element name="Inverse" type="xs:boolean" default="false" minOccurs="0" />
+                              </xs:all>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="PostPanning" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.5" minOccurs="0" />
+                    <xs:element name="Visualization" default="Device only" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:enumeration value="Dont Show" />
+                          <xs:enumeration value="Device only" />
+                          <xs:enumeration value="Mixer and Device" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="MidiMappings" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="MidiMapping" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:all>
+                                <xs:element name="Channel" type="xs:int" default="-1" minOccurs="0" />
+                                <xs:element name="CCNumber" type="xs:int" default="-1" minOccurs="0" />
+                                <xs:element name="Mode" type="xs:int" default="0" minOccurs="0" />
+                                <xs:element name="Min" type="xs:float" default="0.0" minOccurs="0" />
+                                <xs:element name="Max" type="xs:float" default="1.0" minOccurs="0" />
+                                <xs:element name="Inverse" type="xs:boolean" default="false" minOccurs="0" />
+                              </xs:all>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="PostVolume" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="1.0" minOccurs="0" />
+                    <xs:element name="Visualization" default="Device only" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:enumeration value="Dont Show" />
+                          <xs:enumeration value="Device only" />
+                          <xs:enumeration value="Mixer and Device" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="MidiMappings" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="MidiMapping" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:all>
+                                <xs:element name="Channel" type="xs:int" default="-1" minOccurs="0" />
+                                <xs:element name="CCNumber" type="xs:int" default="-1" minOccurs="0" />
+                                <xs:element name="Mode" type="xs:int" default="0" minOccurs="0" />
+                                <xs:element name="Min" type="xs:float" default="0.0" minOccurs="0" />
+                                <xs:element name="Max" type="xs:float" default="1.0" minOccurs="0" />
+                                <xs:element name="Inverse" type="xs:boolean" default="false" minOccurs="0" />
+                              </xs:all>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+            </xs:all>
+            <xs:attribute name="type" use="required" type="xs:string" fixed="SequencerTrackDevice" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DeviceSlot" minOccurs="0">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="Cutoff" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="127" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Resonance" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Innertia" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0039061999414116144" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Type" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="3" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+            </xs:all>
+            <xs:attribute name="type" use="required" type="xs:string" fixed="Filter1Device" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DeviceSlot" minOccurs="0">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="QualitySetup" type="xs:int" default="1" minOccurs="0" />
+              <xs:element name="ReverbTime" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="15" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="LPFilter" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="4000" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="PreDelay" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="10" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DryMix" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="1.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Send" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.40000000596046448" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+            </xs:all>
+            <xs:attribute name="type" use="required" type="xs:string" fixed="Reverb2Device" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DeviceSlot" minOccurs="0">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="Threshold" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="8384" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Ratio" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="3" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Attack" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="1000" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Release" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="100000" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Gain" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="1.2999999523162842" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+            </xs:all>
+            <xs:attribute name="type" use="required" type="xs:string" fixed="ShaperDevice" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DeviceSlot" minOccurs="0">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="Threshold" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="5000" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="LpOrClamp" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="16000" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="WetOut" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="13" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DryOut" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="GateOrFilter" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Type" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="1.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+            </xs:all>
+            <xs:attribute name="type" use="required" type="xs:string" fixed="DistortionDevice" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DeviceSlot" minOccurs="0">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="Threshold" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.015848929062485695" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="AttackInMs" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="5" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="HoldInMs" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="20" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ReleaseInMs" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="200" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="GatedVolume" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+            </xs:all>
+            <xs:attribute name="type" use="required" type="xs:string" fixed="GateDevice" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DeviceSlot" minOccurs="0">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="Threshold" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="-12" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Ratio" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Attack" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.020010007545351982" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Release" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.15656390786170959" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="MakeUp" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Knee" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="10" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+            </xs:all>
+            <xs:attribute name="type" use="required" type="xs:string" fixed="BusCompressorDevice" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DeviceSlot" minOccurs="0">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="LfoRate" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="1.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="LfoDepth" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.40000000596046448" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Feedback" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.40000000596046448" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Delay" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DryWetMix" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.5" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Phase" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="3.1415927410125732" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="FilterType" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="3" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="FilterFreq" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="127" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="FilterResonance" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+            </xs:all>
+            <xs:attribute name="type" use="required" type="xs:string" fixed="ChorusDevice" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DeviceSlot" minOccurs="0">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="LogThreshold" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="11.678028106689453" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Ratio" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="2" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Attack" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.10000000149011612" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Release" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="10" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Gain" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="1.4125375747680664" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+            </xs:all>
+            <xs:attribute name="type" use="required" type="xs:string" fixed="CompressorDevice" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DeviceSlot" minOccurs="0">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="DCOffset" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="AutoDC" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+            </xs:all>
+            <xs:attribute name="type" use="required" type="xs:string" fixed="DcOffsetDevice" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DeviceSlot" minOccurs="0">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="TrackSend" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="127" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="LDelay" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="111" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="RDelay" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="333" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="LFeedback" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.15000000596046448" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="RFeedback" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.30000001192092896" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="MuteDrySignal" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="LTapPan" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="RTapPan" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="1.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="LineSync" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="LSyncTime" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="1.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="RSyncTime" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="3" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="LSyncOffset" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="RSyncOffset" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+            </xs:all>
+            <xs:attribute name="type" use="required" type="xs:string" fixed="DelayDevice" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DeviceSlot" minOccurs="0">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="Type" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Drive" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Tone" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.5" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="WetOut" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="1.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DryOut" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+            </xs:all>
+            <xs:attribute name="type" use="required" type="xs:string" fixed="Distortion2Device" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DeviceSlot" minOccurs="0">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="InputMode" default="L+R" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="L" />
+                    <xs:enumeration value="R" />
+                    <xs:enumeration value="L-R" />
+                    <xs:enumeration value="L+R" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MaxVisualizedGain" type="xs:float" default="20" minOccurs="0" />
+              <xs:element name="Gain0" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Gain1" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Gain2" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Gain3" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Gain4" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Frequency0" type="xs:float" default="100" minOccurs="0" />
+              <xs:element name="Frequency1" type="xs:float" default="1000" minOccurs="0" />
+              <xs:element name="Frequency2" type="xs:float" default="4000" minOccurs="0" />
+              <xs:element name="Frequency3" type="xs:float" default="8000" minOccurs="0" />
+              <xs:element name="Frequency4" type="xs:float" default="12000" minOccurs="0" />
+              <xs:element name="BandWidth0" type="xs:float" default="1.0" minOccurs="0" />
+              <xs:element name="BandWidth1" type="xs:float" default="4" minOccurs="0" />
+              <xs:element name="BandWidth2" type="xs:float" default="4" minOccurs="0" />
+              <xs:element name="BandWidth3" type="xs:float" default="4" minOccurs="0" />
+              <xs:element name="BandWidth4" type="xs:float" default="1.0" minOccurs="0" />
+            </xs:all>
+            <xs:attribute name="type" use="required" type="xs:string" fixed="Eq5Device" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DeviceSlot" minOccurs="0">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="InputMode" default="L+R" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="L" />
+                    <xs:enumeration value="R" />
+                    <xs:enumeration value="L-R" />
+                    <xs:enumeration value="L+R" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MaxVisualizedGain" type="xs:float" default="20" minOccurs="0" />
+              <xs:element name="Gain0" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Gain1" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Gain2" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Gain3" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Gain4" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Gain5" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Gain6" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Gain7" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Gain8" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Gain9" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Frequency0" type="xs:float" default="50" minOccurs="0" />
+              <xs:element name="Frequency1" type="xs:float" default="100" minOccurs="0" />
+              <xs:element name="Frequency2" type="xs:float" default="300" minOccurs="0" />
+              <xs:element name="Frequency3" type="xs:float" default="600" minOccurs="0" />
+              <xs:element name="Frequency4" type="xs:float" default="1200" minOccurs="0" />
+              <xs:element name="Frequency5" type="xs:float" default="2000" minOccurs="0" />
+              <xs:element name="Frequency6" type="xs:float" default="3000.25" minOccurs="0" />
+              <xs:element name="Frequency7" type="xs:float" default="5000" minOccurs="0" />
+              <xs:element name="Frequency8" type="xs:float" default="10000" minOccurs="0" />
+              <xs:element name="Frequency9" type="xs:float" default="15000" minOccurs="0" />
+              <xs:element name="BandWidth0" type="xs:float" default="1.0" minOccurs="0" />
+              <xs:element name="BandWidth1" type="xs:float" default="2" minOccurs="0" />
+              <xs:element name="BandWidth2" type="xs:float" default="2" minOccurs="0" />
+              <xs:element name="BandWidth3" type="xs:float" default="2" minOccurs="0" />
+              <xs:element name="BandWidth4" type="xs:float" default="2" minOccurs="0" />
+              <xs:element name="BandWidth5" type="xs:float" default="2" minOccurs="0" />
+              <xs:element name="BandWidth6" type="xs:float" default="2" minOccurs="0" />
+              <xs:element name="BandWidth7" type="xs:float" default="2" minOccurs="0" />
+              <xs:element name="BandWidth8" type="xs:float" default="2" minOccurs="0" />
+              <xs:element name="BandWidth9" type="xs:float" default="1.0" minOccurs="0" />
+            </xs:all>
+            <xs:attribute name="type" use="required" type="xs:string" fixed="Eq10Device" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DeviceSlot" minOccurs="0">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="Cutoff" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="127" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Resonance" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Innertia" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0039061999414116144" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Type" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="3" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="LimitMoogFilterOutput" type="xs:boolean" default="true" minOccurs="0" />
+            </xs:all>
+            <xs:attribute name="type" use="required" type="xs:string" fixed="Filter2Device" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DeviceSlot" minOccurs="0">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="Amount" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="-0.80000001192092896" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Rate" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="1.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Amplitude" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.019999999552965164" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="FeedBack" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Delay" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="1.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Dephase" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="3.1415927410125732" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="FilterType" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="3" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="FilterFreq" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="127" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="FilterResonance" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+            </xs:all>
+            <xs:attribute name="type" use="required" type="xs:string" fixed="FlangerDevice" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DeviceSlot" minOccurs="0">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="Volume" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="1.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Panning" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.5" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="LPhaseInvert" type="xs:boolean" default="false" minOccurs="0" />
+              <xs:element name="RPhaseInvert" type="xs:boolean" default="false" minOccurs="0" />
+            </xs:all>
+            <xs:attribute name="type" use="required" type="xs:string" fixed="GainerDevice" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DeviceSlot" minOccurs="0">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="Threshold" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="-18" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Attack" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="1.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Hold" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="20" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Release" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="100" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Floor" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ListenToSideChain" type="xs:boolean" default="false" minOccurs="0" />
+              <xs:element name="SideChainHpFreq" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="SideChainLpFreq" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="127" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Type" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+            </xs:all>
+            <xs:attribute name="type" use="required" type="xs:string" fixed="Gate2Device" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DeviceSlot" minOccurs="0">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="BitCrunsh" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="8" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Quality" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.5" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Noise" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="WetOut" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="100" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DryOut" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Interpolate" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+            </xs:all>
+            <xs:attribute name="type" use="required" type="xs:string" fixed="LofiDevice" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DeviceSlot" minOccurs="0">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="InputGain" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Threshold" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="-0.019999999552965164" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="TransientRelease" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="10" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="LongTermRelease" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="200" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Ceiling" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+            </xs:all>
+            <xs:attribute name="type" use="required" type="xs:string" fixed="MaximizerDevice" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DeviceSlot" minOccurs="0">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="InputMode" default="L+R" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="L" />
+                    <xs:enumeration value="R" />
+                    <xs:enumeration value="L+R" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MaxVisualizedGain" type="xs:float" default="20" minOccurs="0" />
+              <xs:element name="LowGain" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="MidGain" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="MidFreq" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.60000002384185791" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="MidQ" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.5" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="HiGain" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+            </xs:all>
+            <xs:attribute name="type" use="required" type="xs:string" fixed="MixerEqDevice" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DeviceSlot" minOccurs="0">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="ReverbTime" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="30" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="PreDelay" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="10" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="LPFilter" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="4000" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="LPGain" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Color" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Width" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.5" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Pan" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.5" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="WetMix" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.40000000596046448" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DryMix" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="1.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+            </xs:all>
+            <xs:attribute name="type" use="required" type="xs:string" fixed="Reverb3Device" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DeviceSlot" minOccurs="0">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="Ceilling" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="20" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Floor" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="2000" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="LFORate" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.5" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Depth" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="4" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Feedback" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.69999998807907104" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Phase" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="3.1415901184082031" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Stages" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="6" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+            </xs:all>
+            <xs:attribute name="type" use="required" type="xs:string" fixed="PhaserDevice" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DeviceSlot" minOccurs="0">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="Send" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="1.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="RoomSize" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.40000000596046448" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Width" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.69999998807907104" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Damp" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.20000000298023224" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DryMix" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="1.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+            </xs:all>
+            <xs:attribute name="type" use="required" type="xs:string" fixed="ReverbDevice" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DeviceSlot" minOccurs="0">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="StereoWidth" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.5" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="SurroundWidth" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+            </xs:all>
+            <xs:attribute name="type" use="required" type="xs:string" fixed="StereoExpanderDevice" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DeviceSlot" minOccurs="0">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="InputChannel" type="xs:int" default="-1" minOccurs="0" />
+              <xs:element name="InputChannelMode" default="L+R" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="L" />
+                    <xs:enumeration value="R" />
+                    <xs:enumeration value="L+R" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Panning" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.5" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Volume" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="1.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+            </xs:all>
+            <xs:attribute name="type" use="required" type="xs:string" fixed="LineInDevice" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DeviceSlot" minOccurs="0">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="SendAmount" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="1.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DestSendTrack" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="MuteSource" type="xs:boolean" default="true" minOccurs="0" />
+            </xs:all>
+            <xs:attribute name="type" use="required" type="xs:string" fixed="SendDevice" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DeviceSlot" minOccurs="0">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="ParameterValue0" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ParameterNumber0" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="ParameterValue1" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ParameterNumber1" type="xs:int" default="1" minOccurs="0" />
+              <xs:element name="ParameterValue2" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ParameterNumber2" type="xs:int" default="2" minOccurs="0" />
+              <xs:element name="ParameterValue3" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ParameterNumber3" type="xs:int" default="3" minOccurs="0" />
+              <xs:element name="ParameterValue4" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ParameterNumber4" type="xs:int" default="4" minOccurs="0" />
+              <xs:element name="ParameterValue5" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ParameterNumber5" type="xs:int" default="5" minOccurs="0" />
+              <xs:element name="ParameterValue6" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ParameterNumber6" type="xs:int" default="6" minOccurs="0" />
+              <xs:element name="ParameterValue7" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ParameterNumber7" type="xs:int" default="7" minOccurs="0" />
+              <xs:element name="ParameterValue8" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ParameterNumber8" type="xs:int" default="8" minOccurs="0" />
+              <xs:element name="ParameterValue9" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ParameterNumber9" type="xs:int" default="9" minOccurs="0" />
+              <xs:element name="ParameterValue10" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ParameterNumber10" type="xs:int" default="10" minOccurs="0" />
+              <xs:element name="ParameterValue11" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ParameterNumber11" type="xs:int" default="11" minOccurs="0" />
+              <xs:element name="ParameterValue12" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ParameterNumber12" type="xs:int" default="12" minOccurs="0" />
+              <xs:element name="ParameterValue13" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ParameterNumber13" type="xs:int" default="13" minOccurs="0" />
+              <xs:element name="LinkedInstrument" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="VisiblePages" type="xs:int" default="1" minOccurs="0" />
+            </xs:all>
+            <xs:attribute name="type" use="required" type="xs:string" fixed="InstrumentAutomationDevice" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DeviceSlot" minOccurs="0">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="DestEffect" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="-1" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DestParameter" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="-1" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Amplitude" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.5" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Offset" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Frequency" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.9375" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Type" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="CustomEnvelope" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="PlayMode" default="Linear" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:enumeration value="Linear" />
+                          <xs:enumeration value="Points" />
+                          <xs:enumeration value="Curve" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="Length" type="xs:int" default="64" minOccurs="0" />
+                    <xs:element name="ValueQuantum" type="xs:float" default="0.0" minOccurs="0" />
+                    <xs:element name="Points" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Point" type="xs:string" default="0,0.0" minOccurs="0" maxOccurs="unbounded" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+            </xs:all>
+            <xs:attribute name="type" use="required" type="xs:string" fixed="LfoDevice" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DeviceSlot" minOccurs="0">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="ControllerValue0" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="100" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ControllerNumber0" type="xs:int" default="7" minOccurs="0" />
+              <xs:element name="ControllerName0" type="xs:string" default="Volume" minOccurs="0" />
+              <xs:element name="ControllerValue1" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="64" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ControllerNumber1" type="xs:int" default="10" minOccurs="0" />
+              <xs:element name="ControllerName1" type="xs:string" default="Panning" minOccurs="0" />
+              <xs:element name="ControllerValue2" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ControllerNumber2" type="xs:int" default="1" minOccurs="0" />
+              <xs:element name="ControllerName2" type="xs:string" default="Modulation" minOccurs="0" />
+              <xs:element name="ControllerValue3" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ControllerNumber3" type="xs:int" default="64" minOccurs="0" />
+              <xs:element name="ControllerName3" type="xs:string" default="Sustain" minOccurs="0" />
+              <xs:element name="ControllerValue4" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="100" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ControllerNumber4" type="xs:int" default="11" minOccurs="0" />
+              <xs:element name="ControllerName4" type="xs:string" default="Expression" minOccurs="0" />
+              <xs:element name="ControllerValue5" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ControllerNumber5" type="xs:int" default="91" minOccurs="0" />
+              <xs:element name="ControllerName5" type="xs:string" default="Reverb" minOccurs="0" />
+              <xs:element name="ControllerValue6" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ControllerNumber6" type="xs:int" default="93" minOccurs="0" />
+              <xs:element name="ControllerName6" type="xs:string" default="Chorus" minOccurs="0" />
+              <xs:element name="ControllerValue7" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ControllerNumber7" type="xs:int" default="2" minOccurs="0" />
+              <xs:element name="ControllerName7" type="xs:string" default="Breath" minOccurs="0" />
+              <xs:element name="ControllerValue8" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ControllerNumber8" type="xs:int" default="9" minOccurs="0" />
+              <xs:element name="ControllerName8" type="xs:string" minOccurs="0" />
+              <xs:element name="ControllerValue9" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ControllerNumber9" type="xs:int" default="10" minOccurs="0" />
+              <xs:element name="ControllerName9" type="xs:string" minOccurs="0" />
+              <xs:element name="ControllerValue10" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ControllerNumber10" type="xs:int" default="11" minOccurs="0" />
+              <xs:element name="ControllerName10" type="xs:string" minOccurs="0" />
+              <xs:element name="ControllerValue11" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ControllerNumber11" type="xs:int" default="12" minOccurs="0" />
+              <xs:element name="ControllerName11" type="xs:string" minOccurs="0" />
+              <xs:element name="ControllerValue12" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ControllerNumber12" type="xs:int" default="13" minOccurs="0" />
+              <xs:element name="ControllerName12" type="xs:string" minOccurs="0" />
+              <xs:element name="ControllerValue13" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ControllerNumber13" type="xs:int" default="14" minOccurs="0" />
+              <xs:element name="ControllerName13" type="xs:string" minOccurs="0" />
+              <xs:element name="LinkedInstrument" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="VisiblePages" type="xs:int" default="1" minOccurs="0" />
+            </xs:all>
+            <xs:attribute name="type" use="required" type="xs:string" fixed="MidiCCDevice" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DeviceSlot" minOccurs="0">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="SrcInstrument" type="xs:int" default="-1" minOccurs="0" />
+              <xs:element name="VelocityScaling" default="Log Slow" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="Log Fast" />
+                    <xs:enumeration value="Log Slow" />
+                    <xs:enumeration value="Linear" />
+                    <xs:enumeration value="Exp Slow" />
+                    <xs:enumeration value="Exp Fast" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VelocityMin" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="VelocityMax" type="xs:int" default="127" minOccurs="0" />
+              <xs:element name="DestEffect" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="-1" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DestParameter" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="-1" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DestMin" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DestMax" minOccurs="0">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="Value" type="xs:float" default="1.0" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+            </xs:all>
+            <xs:attribute name="type" use="required" type="xs:string" fixed="VelocityDevice" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DeviceSlot" minOccurs="0">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="ActiveProgram" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="PluginName" type="xs:string" minOccurs="0" />
+              <xs:element name="PlugUniqueId" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="ParameterChunkType" default="Chunk" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="Chunk" />
+                    <xs:enumeration value="ParameterBag" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParameterChunk" type="xs:string" />
+              <xs:element name="Parameters" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Parameter" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:all>
+                          <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0" />
+                          <xs:element name="Visualization" default="Device only" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:enumeration value="Dont Show" />
+                                <xs:enumeration value="Device only" />
+                                <xs:enumeration value="Mixer and Device" />
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="MidiMappings" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="MidiMapping" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:all>
+                                      <xs:element name="Channel" type="xs:int" default="-1" minOccurs="0" />
+                                      <xs:element name="CCNumber" type="xs:int" default="-1" minOccurs="0" />
+                                      <xs:element name="Mode" type="xs:int" default="0" minOccurs="0" />
+                                      <xs:element name="Min" type="xs:float" default="0.0" minOccurs="0" />
+                                      <xs:element name="Max" type="xs:float" default="1.0" minOccurs="0" />
+                                      <xs:element name="Inverse" type="xs:boolean" default="false" minOccurs="0" />
+                                    </xs:all>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:all>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:all>
+            <xs:attribute name="type" use="required" type="xs:string" fixed="AudioPluginDevice" />
+          </xs:complexType>
+        </xs:element>
+      </xs:all>
+      <xs:attribute name="doc_version" use="required" type="xs:int" fixed="1" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

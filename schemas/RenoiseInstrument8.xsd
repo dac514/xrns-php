@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+  <xs:element name="RenoiseInstrument" type="RenoiseInstrument"/>
+  <xs:complexType name="RenoiseInstrument">
+    <xs:all>
+      <xs:element name="Name" type="xs:string" minOccurs="0"/>
+      <xs:element name="SplitMap" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Split" type="xs:int" default="0" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CopyIntoNewSampleNameCounter" type="xs:int" default="0" minOccurs="0"/>
+      <xs:element name="CopyIntoNewInstrumentNameCounter" type="xs:int" default="0" minOccurs="0"/>
+      <xs:element name="Samples" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Sample" minOccurs="0" maxOccurs="unbounded" type="InstrumentSample"/>
+          </xs:sequence>
+          <xs:attribute name="type" use="optional" type="xs:string"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Envelopes" minOccurs="0" type="InstrumentEnvelopes"/>
+      <xs:element name="MidiProperties" minOccurs="0" type="InstrumentMidiProperties"/>
+      <xs:element name="PluginProperties" minOccurs="0" type="InstrumentPluginProperties"/>
+    </xs:all>
+    <xs:attribute name="doc_version" use="required" type="xs:int" fixed="8"/>
+    <xs:attribute name="type" use="optional" type="xs:string"/>
+  </xs:complexType>
+  <xs:complexType name="InstrumentSample">
+    <xs:all>
+      <xs:element name="Name" type="xs:string" minOccurs="0"/>
+      <xs:element name="FileName" type="xs:string" minOccurs="0"/>
+      <xs:element name="FileModificationDate" type="xs:date" minOccurs="0"/>
+      <xs:element name="FileModificationDayTime" type="xs:time" minOccurs="0"/>
+      <xs:element name="Volume" type="xs:float" default="1.0" minOccurs="0"/>
+      <xs:element name="Panning" type="xs:float" default="0.5" minOccurs="0"/>
+      <xs:element name="Finetune" type="xs:byte" default="0" minOccurs="0"/>
+      <xs:element name="BaseNote" type="xs:byte" default="48" minOccurs="0"/>
+      <xs:element name="AutoSeek" type="xs:boolean" default="false" minOccurs="0"/>
+      <xs:element name="BeatSyncIsActive" type="xs:boolean" default="false" minOccurs="0"/>
+      <xs:element name="BeatSyncLines" type="xs:short" default="16" minOccurs="0"/>
+      <xs:element name="NewNoteAction" default="Cut" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Cut"/>
+            <xs:enumeration value="NoteOff"/>
+            <xs:enumeration value="None"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="InterpolationMode" default="Cubic" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="None"/>
+            <xs:enumeration value="Linear"/>
+            <xs:enumeration value="Cubic"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="LoopMode" default="Off" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Off"/>
+            <xs:enumeration value="Forward"/>
+            <xs:enumeration value="Backward"/>
+            <xs:enumeration value="PingPong"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="LoopStart" type="xs:unsignedInt" default="0" minOccurs="0"/>
+      <xs:element name="LoopEnd" type="xs:unsignedInt" default="0" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="type" use="optional" type="xs:string"/>
+  </xs:complexType>
+  <xs:complexType name="InstrumentEnvelopes">
+    <xs:all>
+      <xs:element name="Volume" minOccurs="0" type="InstrumentPlayerEnvelope"/>
+      <xs:element name="Pan" minOccurs="0" type="InstrumentPlayerEnvelope"/>
+      <xs:element name="Pitch" minOccurs="0" type="InstrumentPlayerEnvelope"/>
+      <xs:element name="FilterType" type="xs:int" default="3" minOccurs="0"/>
+      <xs:element name="Cutoff" minOccurs="0" type="InstrumentFilterEnvelope"/>
+      <xs:element name="Resonance" minOccurs="0" type="InstrumentFilterEnvelope"/>
+    </xs:all>
+    <xs:attribute name="type" use="optional" type="xs:string"/>
+  </xs:complexType>
+  <xs:complexType name="InstrumentPlayerEnvelope">
+    <xs:all>
+      <xs:element name="IsActive" type="xs:boolean" default="false" minOccurs="0"/>
+      <xs:element name="InterpolationMode" default="Curve" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Linear"/>
+            <xs:enumeration value="Curve"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="SustainIsActive" type="xs:boolean" default="false" minOccurs="0"/>
+      <xs:element name="SustainPos" type="xs:int" default="0" minOccurs="0"/>
+      <xs:element name="LoopStart" type="xs:int" default="0" minOccurs="0"/>
+      <xs:element name="LoopEnd" type="xs:int" default="71" minOccurs="0"/>
+      <xs:element name="LoopMode" default="Off" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Off"/>
+            <xs:enumeration value="Forward"/>
+            <xs:enumeration value="Backward"/>
+            <xs:enumeration value="PingPong"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Decay" type="xs:int" default="128" minOccurs="0"/>
+      <xs:element name="Nodes" minOccurs="0" type="Envelope"/>
+      <xs:element name="Lfo1" minOccurs="0" type="InstrumentEnvelopeLfo"/>
+      <xs:element name="Lfo2" minOccurs="0" type="InstrumentEnvelopeLfo"/>
+    </xs:all>
+    <xs:attribute name="type" use="optional" type="xs:string"/>
+  </xs:complexType>
+  <xs:complexType name="Envelope">
+    <xs:all>
+      <xs:element name="PlayMode" default="Curve" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Linear"/>
+            <xs:enumeration value="Points"/>
+            <xs:enumeration value="Curve"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Length" type="xs:int" default="72" minOccurs="0"/>
+      <xs:element name="ValueQuantum" type="xs:float" default="0.0" minOccurs="0"/>
+      <xs:element name="Polarity" default="Unipolar" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Unipolar"/>
+            <xs:enumeration value="Bipolar"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Points" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Point" type="xs:string" default="0,0.99000000953674316" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:all>
+    <xs:attribute name="type" use="optional" type="xs:string"/>
+  </xs:complexType>
+  <xs:complexType name="InstrumentEnvelopeLfo">
+    <xs:all>
+      <xs:element name="Mode" default="Off" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Off"/>
+            <xs:enumeration value="Sin"/>
+            <xs:enumeration value="Saw"/>
+            <xs:enumeration value="Pulse"/>
+            <xs:enumeration value="Random"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Frequency" type="xs:int" default="3" minOccurs="0"/>
+      <xs:element name="Amplitude" type="xs:int" default="27" minOccurs="0"/>
+      <xs:element name="Dephase" type="xs:int" default="0" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="type" use="optional" type="xs:string"/>
+  </xs:complexType>
+  <xs:complexType name="InstrumentFilterEnvelope">
+    <xs:all>
+      <xs:element name="IsActive" type="xs:boolean" default="false" minOccurs="0"/>
+      <xs:element name="InterpolationMode" default="Curve" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Linear"/>
+            <xs:enumeration value="Curve"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="SustainIsActive" type="xs:boolean" default="false" minOccurs="0"/>
+      <xs:element name="SustainPos" type="xs:int" default="0" minOccurs="0"/>
+      <xs:element name="LoopStart" type="xs:int" default="0" minOccurs="0"/>
+      <xs:element name="LoopEnd" type="xs:int" default="71" minOccurs="0"/>
+      <xs:element name="LoopMode" default="Off" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Off"/>
+            <xs:enumeration value="Forward"/>
+            <xs:enumeration value="Backward"/>
+            <xs:enumeration value="PingPong"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Decay" type="xs:int" default="128" minOccurs="0"/>
+      <xs:element name="Nodes" minOccurs="0" type="Envelope"/>
+      <xs:element name="Lfo" minOccurs="0" type="InstrumentEnvelopeLfo"/>
+      <xs:element name="AutoAmp" minOccurs="0" type="InstrumentEnvelopeAutoAmp"/>
+    </xs:all>
+    <xs:attribute name="type" use="optional" type="xs:string"/>
+  </xs:complexType>
+  <xs:complexType name="InstrumentEnvelopeAutoAmp">
+    <xs:all>
+      <xs:element name="IsActive" type="xs:boolean" default="false" minOccurs="0"/>
+      <xs:element name="Attack" type="xs:int" default="100" minOccurs="0"/>
+      <xs:element name="Release" type="xs:int" default="70" minOccurs="0"/>
+      <xs:element name="Amount" type="xs:int" default="60" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="type" use="optional" type="xs:string"/>
+  </xs:complexType>
+  <xs:complexType name="InstrumentMidiProperties">
+    <xs:all>
+      <xs:element name="IsActive" type="xs:boolean" default="false" minOccurs="0"/>
+      <xs:element name="Channel" type="xs:byte" default="1" minOccurs="0"/>
+      <xs:element name="DeviceName" type="xs:string" minOccurs="0"/>
+      <xs:element name="InstrumentType" default="ext. MIDI" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="ext. MIDI"/>
+            <xs:enumeration value="LineIn Ret"/>
+            <xs:enumeration value="int. MIDI"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Delay" type="xs:int" default="0" minOccurs="0"/>
+      <xs:element name="Program" type="xs:int" default="-1" minOccurs="0"/>
+      <xs:element name="Bank" type="xs:int" default="-1" minOccurs="0"/>
+      <xs:element name="BaseNote" type="xs:int" default="48" minOccurs="0"/>
+      <xs:element name="Length" type="xs:int" default="8000" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="type" use="optional" type="xs:string"/>
+  </xs:complexType>
+  <xs:complexType name="InstrumentPluginProperties">
+    <xs:all>
+      <xs:element name="Channel" type="xs:byte" default="1" minOccurs="0"/>
+      <xs:element name="BaseNote" type="xs:int" default="48" minOccurs="0"/>
+      <xs:element name="Volume" type="xs:float" default="1.0" minOccurs="0"/>
+      <xs:element name="OutputRoutings" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="OutputRouting" minOccurs="0" maxOccurs="unbounded" type="InstrumentPluginRouting"/>
+          </xs:sequence>
+          <xs:attribute name="type" use="optional" type="xs:string"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AutoSuspend" type="xs:boolean" default="true" minOccurs="0"/>
+      <xs:element name="AliasInstrumentIndex" type="xs:int" default="-1" minOccurs="0"/>
+      <xs:element name="AliasFxIndices" type="xs:string" default="-1,-1" minOccurs="0"/>
+      <xs:element name="PluginDevice" minOccurs="0" type="AudioPluginDevice"/>
+    </xs:all>
+    <xs:attribute name="type" use="optional" type="xs:string"/>
+  </xs:complexType>
+  <xs:complexType name="InstrumentPluginRouting">
+    <xs:all>
+      <xs:element name="Enabled" type="xs:boolean" default="true" minOccurs="0"/>
+      <xs:element name="Name" type="xs:string" default="Bus #01" minOccurs="0"/>
+      <xs:element name="MixMode" default="L+R" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="L"/>
+            <xs:enumeration value="R"/>
+            <xs:enumeration value="L+R"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="AutoAssign" type="xs:boolean" default="true" minOccurs="0"/>
+      <xs:element name="AssignedTrack" type="xs:int" default="-1" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="type" use="optional" type="xs:string"/>
+  </xs:complexType>
+  <xs:complexType name="AudioPluginDevice">
+    <xs:all>
+      <xs:element name="IsActive" type="xs:boolean" default="true" minOccurs="0"/>
+      <xs:element name="IsSelected" type="xs:boolean" default="false" minOccurs="0"/>
+      <xs:element name="SelectedPresetName" type="xs:string" default="Init" minOccurs="0"/>
+      <xs:element name="SelectedPresetIsModified" type="xs:boolean" default="false" minOccurs="0"/>
+      <xs:element name="RunTimePresetA" minOccurs="0" type="FilterDevicePreset"/>
+      <xs:element name="RunTimePresetB" minOccurs="0" type="FilterDevicePreset"/>
+      <xs:element name="IsMaximized" type="xs:boolean" default="true" minOccurs="0"/>
+      <xs:element name="ActiveProgram" type="xs:int" default="0" minOccurs="0"/>
+      <xs:element name="PluginType" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="AU"/>
+            <xs:enumeration value="VST"/>
+            <xs:enumeration value="LADSPA"/>
+            <xs:enumeration value="DSSI"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="PluginIdentifier" type="xs:string" minOccurs="0"/>
+      <xs:element name="PluginDisplayName" type="xs:string" minOccurs="0"/>
+      <xs:element name="PluginShortDisplayName" type="xs:string" minOccurs="0"/>
+      <xs:element name="PluginEditorWindowPosition" type="xs:string" default="-1,-1" minOccurs="0"/>
+      <xs:element name="ParameterChunkType" default="Chunk" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Chunk"/>
+            <xs:enumeration value="ParameterBag"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="ParameterChunk" type="xs:string"/>
+      <xs:element name="Parameters" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Parameter" minOccurs="0" maxOccurs="unbounded" type="AudioPluginDeviceParameter"/>
+          </xs:sequence>
+          <xs:attribute name="type" use="optional" type="xs:string"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:all>
+    <xs:attribute name="type" use="required" type="xs:string" fixed="AudioPluginDevice"/>
+  </xs:complexType>
+  <xs:complexType name="FilterDevicePreset">
+    <xs:all>
+      <xs:element name="DeviceSlot" minOccurs="0" type="AudioPluginDevice"/>
+    </xs:all>
+    <xs:attribute name="type" use="required" type="xs:string" fixed="FilterDevicePreset"/>
+  </xs:complexType>
+  <xs:complexType name="AudioPluginDeviceParameter">
+    <xs:all>
+      <xs:element name="Value" type="xs:float" default="0.0" minOccurs="0"/>
+      <xs:element name="Visualization" default="Device only" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Dont Show"/>
+            <xs:enumeration value="Device only"/>
+            <xs:enumeration value="Mixer and Device"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="MidiMappings" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="MidiMapping" minOccurs="0" maxOccurs="unbounded" type="MidiMapping"/>
+          </xs:sequence>
+          <xs:attribute name="type" use="optional" type="xs:string"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:all>
+    <xs:attribute name="type" use="optional" type="xs:string"/>
+  </xs:complexType>
+  <xs:complexType name="MidiMapping">
+    <xs:all>
+      <xs:element name="MappingMode" default="Controllers" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Controllers"/>
+            <xs:enumeration value="Notes"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="ControllerMode" default="Absolute 7 bit" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Absolute 7 bit"/>
+            <xs:enumeration value="Relative signed bit"/>
+            <xs:enumeration value="Relative signed bit 2"/>
+            <xs:enumeration value="Relative bin offset"/>
+            <xs:enumeration value="Relative two's comp"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="NoteMode" default="Value" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Trigger"/>
+            <xs:enumeration value="Gate"/>
+            <xs:enumeration value="Value"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Channel" type="xs:int" default="-1" minOccurs="0"/>
+      <xs:element name="CCNumberOrNote" type="xs:int" default="-1" minOccurs="0"/>
+      <xs:element name="Min" type="xs:float" default="0.0" minOccurs="0"/>
+      <xs:element name="Max" type="xs:float" default="1.0" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="type" use="optional" type="xs:string"/>
+  </xs:complexType>
+</xs:schema>
