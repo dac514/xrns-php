@@ -276,7 +276,7 @@ foreach ($sx2->PatternPool->Patterns->Pattern as $p) {
             foreach ($x->Lines->Line as $y) {
                 if ($y->NoteColumns->NoteColumn) {
                     foreach ($y->NoteColumns->NoteColumn as $z) {
-                        if ($z->Instrument) {
+                        if ($z->Instrument && '..' != $z->Instrument) {
                             list($instr) = sscanf($z->Instrument, '%x');
                             $z->Instrument = sprintf("%02X", $instr + $offset);
                         }
