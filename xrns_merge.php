@@ -185,21 +185,17 @@ for ($i = 0; $i < $offset2; ++$i) {
     }
 }
 
-// VSTi AssignedTrack (or AutoAssignedTrack, depending on Renoise XSD)
+// AssignedTrack routings
 foreach ($sx2->Instruments->Instrument as $x) {
-    if ($x->PluginProperties) {
-        if ($x->PluginProperties->AssignedTrack && $x->PluginProperties->AssignedTrack >= 0) {
-            $x->PluginProperties->AssignedTrack += $offset;
+    if ($x->PluginProperties->OutputRoutings->OutputRouting) {
+        foreach ($x->PluginProperties->OutputRoutings->OutputRouting as $y) {
+            if ($y->AssignedTrack != -1) {
+                $y->AssignedTrack += $offset;
+            }
         }
     }
-}
-
-// Output routings
-if ($sx2->OutputRoutings->OutputRouting) {
-    foreach ($sx2->OutputRoutings->OutputRouting as $x) {
-        if ($x->AssignedTrack != -1) {
-            $x->AssignedTrack += $offset;
-        }
+    if ($x->MidiInputProperties->AssignedTrack != -1) {
+        $x->MidiInputProperties->AssignedTrack += $offset;
     }
 }
 
