@@ -316,6 +316,11 @@ foreach (array('SequencerTrack', 'SequencerGroupTrack') as $track)
 
 // SampleData directory
 if (is_dir($unzip2 . '/SampleData/')) {
+
+    if (!is_dir($unzip1 . '/SampleData/')) {
+        $ret = mkdir($unzip1 . '/SampleData/');
+    }
+
     foreach(new DirectoryIterator($unzip2 . '/SampleData/') as $file) {
         if ($file == '.' || $file == '..') continue; // Skip these files
 
