@@ -1,7 +1,7 @@
 xrns-php
 ========
 
-My PHP Scripts For Renoise
+My PHP Scripts For [Renoise](http://renoise.com).
 
  * __xrns_merge__: merges 2 XRNS modules
  * __xrns_ogg__: compresses XRNS and XRNI with OGG VORBIS
