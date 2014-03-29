@@ -101,7 +101,7 @@ class Ogg
             case ('aif'):
             case ('aiff'):
 
-                $command = $path_to_oggenc . " --quality $quality \"$fullpath\" ";
+                $command = $path_to_oggenc . " --quality $quality " . escapeshellarg($fullpath);
                 $res = -1; // any nonzero value
                 exec($command, $unusedArrayResult, $res);
                 if ($res != 0) trigger_error("Warning: oggenc return_val was $res, there was a problem compressing $filename", E_USER_WARNING);
