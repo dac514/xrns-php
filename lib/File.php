@@ -122,7 +122,7 @@ class File
         exec($zipCmd, $UnusedArrayResult, $res);
 
         if ($res != 0)
-            trigger_error("ZipAllFiles() return_val was $res", E_USER_WARNING);
+            trigger_error("Zip command returned error code $res", E_USER_WARNING);
 
         // Back to previous working directory
         chdir($cwd);

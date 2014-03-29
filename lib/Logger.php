@@ -164,7 +164,7 @@ class Logger
         $d .= "Line: " . $e->getLine();
         $d = $this->color($d, 'dark_gray');
 
-        return "$s\n$d\n";
+        return "{$s}{$d}\n";
     }
 
 

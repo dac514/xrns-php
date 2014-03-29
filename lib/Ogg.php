@@ -42,7 +42,7 @@ class Ogg
      * @param string $directory
      * @param int $quality (optional)
      */
-    function compressDir($directory, $quality = 3)
+    protected function compressDir($directory, $quality = 3)
     {
         $directoryIterator = new \RecursiveDirectoryIterator($directory);
         $recursiveIterator = new \RecursiveIteratorIterator($directoryIterator, \RecursiveIteratorIterator::CHILD_FIRST);
@@ -66,7 +66,7 @@ class Ogg
      * @param int $quality
      * @throws Exception\ExecutableNotFound
      */
-    function compressFile($fullpath, $quality = 3)
+    protected function compressFile($fullpath, $quality = 3)
     {
         $path_to_oggenc = 'oggenc';
         $path_to_flac = 'flac';

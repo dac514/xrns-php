@@ -69,11 +69,11 @@ class Merge
         // Try to free memory
         unset($this->sx2);
 
-        if (!$this->validate($this->sx1)) {
+        if (!$this->validate()) {
             throw new Exception\FileOperation("XML is invalid.");
         }
 
-        $this->replaceSong1Xml();
+        $this->replaceSong1XmlFile();
     }
 
 
@@ -592,11 +592,11 @@ class Merge
 
 
     /**
-     * \SimpleXMLElement $sx
+     * @return bool
      */
-    protected function validate($sx)
+    protected function validate()
     {
-        $xsd = 'RenoiseSong' . (int)$sx['doc_version'] . '.xsd';
+        $xsd = 'RenoiseSong' . (int)$this->sx1['doc_version'] . '.xsd';
         $schema = realpath(__DIR__ . "/../schemas/$xsd");
 
         if (!$schema) {
@@ -606,7 +606,7 @@ class Merge
         }
 
         $dd = new \DOMDocument;
-        $dd->loadXML($sx->asXML());
+        $dd->loadXML($this->sx1->asXML());
         if ($dd->schemaValidate($schema)) {
             return true;
         }
@@ -618,7 +618,7 @@ class Merge
     /**
      * Replace Song.xml
      */
-    protected function replaceSong1Xml()
+    protected function replaceSong1XmlFile()
     {
         $unzipDir = $this->file1->getTmpDir();
 
