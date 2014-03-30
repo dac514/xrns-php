@@ -216,7 +216,7 @@ class File
         exec($unzipCmd, $unusedArrayResult, $res);
 
         if ($res != 0)
-            trigger_error("UnzipAllFiles() return_val was $res", E_USER_WARNING);
+            trigger_error("Unzip return_val was $res", E_USER_WARNING);
 
         // http://www.info-zip.org/FAQ.html#error-codes
         if ($res == 0 || $res == 1) {
