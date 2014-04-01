@@ -4,6 +4,15 @@ namespace XrnsPhp;
 
 class Ogg
 {
+    /**
+     * @var string
+     */
+    protected $pathToOggenc = 'oggenc';
+
+    /**
+     * @var string
+     */
+    protected $pathToFlac = 'flac';
 
     /**
      * @var File
@@ -13,9 +22,18 @@ class Ogg
 
     /**
      * @param File $file
+     * @throws Exception\ExecutableNotFound
      */
     function __construct(File $file)
     {
+        if (!command_exists($this->pathToOggenc)) {
+            throw new Exception\ExecutableNotFound('Cannot find Ogg Vobis executable: oggenc');
+        }
+
+        if (!command_exists($this->pathToFlac)) {
+            throw new Exception\ExecutableNotFound('Cannot find Flac executable: flac');
+        }
+
         $this->file = $file;
     }
 
@@ -68,30 +86,19 @@ class Ogg
      */
     protected function compressFile($fullpath, $quality = 3)
     {
-        $path_to_oggenc = 'oggenc';
-        $path_to_flac = 'flac';
-        $unusedArrayResult = array();
-
-        if (!command_exists($path_to_oggenc)) {
-            throw new Exception\ExecutableNotFound('Cannot find Ogg Vobis executable: oggenc');
-        }
-
-        if (!command_exists($path_to_flac)) {
-            throw new Exception\ExecutableNotFound('Cannot find Flac executable: flac');
-        }
-
         // Skip files smaller than 4096 bytes
         if (filesize($fullpath) <= 4096) {
             return;
         }
 
         $filename = pathinfo($fullpath, PATHINFO_BASENAME);
+        $unusedArrayResult = array();
 
         switch (strtolower(pathinfo($fullpath, PATHINFO_EXTENSION))) {
 
             case ('flac') :
 
-                $command = $path_to_flac . ' -d --delete-input-file ' . escapeshellarg($fullpath);
+                $command = $this->pathToFlac . ' -d --delete-input-file ' . escapeshellarg($fullpath);
                 $res = -1; // any nonzero value
                 exec($command, $unusedArrayResult, $res);
                 if ($res != 0) trigger_error("Warning: flac return_val was $res, there was a problem decompressing flac $filename", E_USER_WARNING);
@@ -101,7 +108,7 @@ class Ogg
             case ('aif'):
             case ('aiff'):
 
-                $command = $path_to_oggenc . " --quality $quality " . escapeshellarg($fullpath);
+                $command = $this->pathToOggenc . " --quality $quality " . escapeshellarg($fullpath);
                 $res = -1; // any nonzero value
                 exec($command, $unusedArrayResult, $res);
                 if ($res != 0) trigger_error("Warning: oggenc return_val was $res, there was a problem compressing $filename", E_USER_WARNING);
