@@ -8,7 +8,7 @@ My PHP Scripts For [Renoise](http://renoise.com).
 
 These scripts were last tested with, and should be compatible with, Renoise 2.8. 
 
-Patches welcome.
+Pull requests welcome.
 
 
 Usage
